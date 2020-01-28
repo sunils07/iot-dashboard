@@ -1,0 +1,2 @@
+export const ON_OFF_LIGHTER = "ON_OFF_LIGHTER";
+export const START_STOP_BURNER = "START_STOP_BURNER";

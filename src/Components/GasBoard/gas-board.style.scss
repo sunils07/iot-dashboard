@@ -1,0 +1,43 @@
+.label-switch {
+    padding-left: 40px;
+}
+.burners {
+    padding-top: 10px;
+
+    .burners-block {
+        flex: 1;
+        display: flex;
+
+        &:last-of-type {
+            >.burner {
+                border-right-width: 0px;
+            }
+        }
+
+        >.burner {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            position: relative;
+
+            .burner-start {
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                .item-heading {
+                    margin: 0 0 8px 0;
+                }
+            }
+
+            .item-heading {
+                font-size: 14px;
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+    }
+}

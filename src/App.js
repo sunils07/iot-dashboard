@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import BoardHeader from "./Components/BoardHeader/BoardHeader.Index";
+import GasBoard from "./Components/GasBoard/GasBoard.Index";
+import store from "./lib/redux/store";
+
+import './styles/common.style.scss';
+import './app.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div id="iot-board" className="container iot-board">
+        <div className="row">
+          <BoardHeader />
+        </div>
+        <div className="row">
+          <div className="col">
+            <GasBoard />
+          </div>
+        </div>
+      </div>
+    </Provider>
   );
 }
 
